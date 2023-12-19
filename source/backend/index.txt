@@ -1,0 +1,10 @@
+import EntityName from './entity.js';
+import controller from './controller.js';
+import permissions from './permissions.js';
+import seed from './seed.js';
+
+const componentName = 'folderName';
+
+const publicFunctions = [];
+
+export default { componentName, publicFunctions, seed, entity: EntityName, controller, permissions };

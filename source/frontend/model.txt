@@ -1,0 +1,19 @@
+import { fieldType } from '../../../../shared/fieldTypes.js';
+// import api from './api.js';
+
+const model = {
+	id: {
+		search: { type: fieldType.NUMBER, multiple: true },
+		display: { type: fieldType.NUMBER, sortable: true },
+		create: null,
+		edit: null
+	},
+	name: {
+		search: { type: fieldType.TEXT_NUMBER, multiple: true },
+		display: { type: fieldType.TEXT_NUMBER, sortable: true },
+		create: null,
+		edit: null
+	}
+};
+
+export default model;

@@ -1,0 +1,27 @@
+// import { ComponentsDiscoveryService } from '../../../services/index.js'
+import { dataTypes, BaseEntity } from '../../../shared/index.js'
+
+class EntityName extends BaseEntity {
+    constructor(fieldName) {
+        super(fieldName)
+        this.name = fieldName?.name
+    }
+
+    static getFieldsPermissions = () => {
+        const { read, write, search } = BaseEntity.getFieldsAccessTypes()
+        return {
+            ...BaseEntity.getFieldsPermissions(),
+            name: [read, write, search]
+        }
+    }
+
+    static getTableSchema = () => ({
+        tableName: EntityName.name,
+        columns: {
+            name: { type: dataTypes.TEXT, index: true, required: false }
+        }
+       //  seeds: (isDevSeed) => isDevSeed ? seed.getDevSeeds() : seed.getProdSeeds()
+    })
+}
+
+export default EntityName

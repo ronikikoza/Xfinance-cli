@@ -1,0 +1,25 @@
+import _ from 'lodash';
+import EntityName from './entity.js';
+import controller from './controller.js';
+import { PermissionsService } from '../../../../services/index.js';
+import { getSearchRestrictions, getUpdateRestrictions, getReturningFieldsRestrictions } from '../../../../permissions/restrictions/index.js';
+
+const componentName = _.camelCase(EntityName.name);
+
+const componentExcludedControllerFunctions = [];
+
+const getComponentActions = () => [...PermissionsService.generateComponentDefaultActions(componentName, _.keys(controller), componentExcludedControllerFunctions)];
+
+const getComponentExcludedGlobalRestrictions = () => ({});
+
+const getComponentRestrictions = () => [...getSearchRestrictions(), ...getUpdateRestrictions(), ...getReturningFieldsRestrictions()];
+
+const getComponentPermissionsMap = () => {
+	return PermissionsService.generateComponentPermissionsMap({
+		componentActions: getComponentActions(),
+		componentRestrictions: getComponentRestrictions(),
+		Entity: EntityName
+	});
+};
+
+export default { componentName, getComponentActions, getComponentExcludedGlobalRestrictions, getComponentRestrictions, getComponentPermissionsMap };

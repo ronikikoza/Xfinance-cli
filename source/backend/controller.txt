@@ -1,0 +1,11 @@
+import EntityName from './entity.js';
+// import externalApisService from './service.js';
+import { generateBasicControllersFunctions } from '../../../basicControllersFunctions.js';
+// import { eventsMap } from '../../../../shared/index.js';
+
+const { create, update, remove, search, searchCount, searchExport, getHistoryLog, getDisplayList } = generateBasicControllersFunctions(
+	EntityName,
+	'name'
+);
+
+export default { create, update, remove, search, searchCount, searchExport, getHistoryLog, getDisplayList };

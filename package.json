@@ -1,0 +1,26 @@
+{
+  "name": "ronikiko-cli",
+  "version": "1.0.7",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "source",
+    "helpers"
+  ],
+  "bin": {
+    "xf": "index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "global-modules-path": "^3.0.0",
+    "lodash": "^4.17.21",
+    "shell-artist": "^2.7.1"
+  }
+}

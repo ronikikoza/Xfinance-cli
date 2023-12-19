@@ -1,0 +1,5 @@
+import { getBasicActions } from '../../../basicActions.js';
+
+const { create, remove, getHistoryLog, searchExport } = getBasicActions('folderName');
+
+export default { create, remove, getHistoryLog, searchExport };

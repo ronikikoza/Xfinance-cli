@@ -1,0 +1,7 @@
+import { getSharedApiMethods } from '../../../../shared/api.js';
+
+const BASE_URL = '/api/folderName';
+
+const { create, update, remove, search, searchCount, searchExport, getHistoryLog, getDisplayList } = getSharedApiMethods(BASE_URL);
+
+export default { create, update, remove, search, searchCount, searchExport, getHistoryLog, getDisplayList };

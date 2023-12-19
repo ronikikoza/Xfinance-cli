@@ -1,0 +1,36 @@
+const folderNameSearchPage = {
+	icon: 'mdi-api',
+	name: 'folderName',
+	route: '/folderName',
+	tabs: [
+		{
+			icon: 'mdi-currency-usd',
+			name: 'folderName',
+			apiEntity: 'folderName',
+			entities: ['folderName'],
+			editable: true,
+			tableActions: [],
+			rowActions: [],
+			bulkActions: []
+		}
+	],
+	defaultPageTemplate: {
+		id: 1,
+		name: 'default',
+		defaultTab: 'folderName',
+		defaultItemsPerPage: 20,
+		defaultSearchFormCollapsed: false,
+		inputStyleType: 'outlined',
+		tabs: [
+			{ name: 'folderName', defaultOrderBy: { id: 'DESC' }, inputFields: [], displayColumns: [], pinnedColumns: [] }			
+		]
+	}
+};
+
+const getProdSeeds = () => [];
+
+const getDevSeeds = () => [];
+
+const getSearchPageSeed = () => folderNameSearchPage;
+
+export default { getSearchPageSeed, getProdSeeds, getDevSeeds };

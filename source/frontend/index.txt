@@ -1,0 +1,7 @@
+import model from './model.js';
+import api from './api.js';
+import actions from './actions.js';
+
+const entityName = 'folderName';
+
+export default { entityName, model, api, actions };
